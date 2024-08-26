@@ -3,7 +3,7 @@ import os
 from data.mae.data_module import setup_data_module
 from model.mae.model import TrackingMaskedAutoEncoder
 from model.mae.model_config import FullConfig
-from model.model_driver import ModelDriver
+from pytorch_model_commons.model.model_driver import ModelDriver
 
 
 def run_training(config: FullConfig):

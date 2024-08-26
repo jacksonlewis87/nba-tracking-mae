@@ -1,14 +1,15 @@
 [tool.poetry]
-name = "trackingmae"
+name = "nba-tracking-mae"
 version = "0.1.0"
 description = ""
 authors = ["Jackson Lewis"]
 readme = "README.md"
-packages = [{include = "src"}]
+packages = [{include = "nba_tracking_mae"}]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testspath = ["tests"]
+addopts = "-p no:cacheprovider"
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -16,6 +17,7 @@ pytorch-lightning = "~2.0.4"
 tensorboard = "~2.16.2"
 tensorboardx = "~2.6.2"
 torch = "~2.0.1"
+pytorch_model_commons = { git = "https://github.com/jacksonlewis87/pytorch-model-commons.git", branch = "main" }
 
 matplotlib = "^3.9.0"
 [tool.poetry.group.dev.dependencies]
